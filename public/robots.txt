@@ -1,0 +1,19 @@
+# Clean Site Dumpsters - Nashville Dumpster Rental
+# https://csdwaste.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://csdwaste.com/sitemap.xml
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow search engines to crawl all public pages
+Allow: /services/
+Allow: /service-areas/
+Allow: /about
+Allow: /contact
