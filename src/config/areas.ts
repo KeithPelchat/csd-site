@@ -50,6 +50,18 @@ export const serviceAreas: ServiceAreaConfig[] = [
     featured: false
   },
   {
+    id: 'mount-juliet',
+    name: 'Mount Juliet',
+    slug: 'mount-juliet',
+    description: 'Professional dumpster rental services for Mount Juliet and Wilson County. Fast delivery for residential, commercial, and construction projects.',
+    zip_codes: ['37122', '37138'],
+    coordinates: {
+      lat: 36.2000,
+      lng: -86.5186
+    },
+    featured: false
+  },
+  {
     id: 'brentwood',
     name: 'Brentwood',
     slug: 'brentwood',
