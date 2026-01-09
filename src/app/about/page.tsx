@@ -36,7 +36,7 @@ export default function AboutPage() {
           <h1 className="font-heading font-bold uppercase tracking-wide text-5xl md:text-6xl lg:text-7xl text-black mb-4">
             Nashville&apos;s Most Reliable Dumpster Rental Company
           </h1>
-          <p className="font-heading text-xl md:text-2xl text-[#D32F2F] font-medium uppercase tracking-wide">
+          <p className="font-heading text-xl md:text-2xl text-[#D32F2F] font-semibold uppercase tracking-wide">
             Locally Owned. Always Available. Built by Contractors for Contractors.
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           {/* Opening */}
           <div className="mb-12">
-            <p className="font-body text-lg md:text-xl text-gray-700 leading-relaxed text-center">
+            <p className="font-body text-base md:text-lg text-gray-700 leading-relaxed text-center">
               Frustrated with dumpster companies that don&apos;t communicate? Tired of unreliable service when your project timeline depends on timely debris removal? You&apos;ve found the solution.
             </p>
           </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
             <p className="font-body text-base md:text-lg text-gray-700 leading-relaxed mb-6">
               We saw projects delayed. We dealt with poor communication. We watched contractors struggle with waste management companies that didn&apos;t understand the urgency of keeping job sites clean and safe.
             </p>
-            <p className="font-body text-lg md:text-xl text-black font-bold">
+            <p className="font-body text-base md:text-lg text-black font-bold leading-relaxed">
               So we created something better.
             </p>
           </div>
@@ -83,15 +83,15 @@ export default function AboutPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-black text-white p-6 rounded-lg text-center">
-                <div className="font-heading text-[#D32F2F] text-3xl md:text-4xl font-bold mb-2">24/7</div>
+                <div className="font-heading text-[#D32F2F] text-3xl md:text-4xl font-bold tracking-wide mb-2">24/7</div>
                 <div className="font-body text-gray-300">Online Ordering</div>
               </div>
               <div className="bg-black text-white p-6 rounded-lg text-center">
-                <div className="font-heading text-[#D32F2F] text-3xl md:text-4xl font-bold mb-2 uppercase">Instant</div>
+                <div className="font-heading text-[#D32F2F] text-3xl md:text-4xl font-bold uppercase tracking-wide mb-2">Instant</div>
                 <div className="font-body text-gray-300">Pricing Available</div>
               </div>
               <div className="bg-black text-white p-6 rounded-lg text-center">
-                <div className="font-heading text-[#D32F2F] text-3xl md:text-4xl font-bold mb-2 uppercase">Your</div>
+                <div className="font-heading text-[#D32F2F] text-3xl md:text-4xl font-bold uppercase tracking-wide mb-2">Your</div>
                 <div className="font-body text-gray-300">Schedule, Not Ours</div>
               </div>
             </div>

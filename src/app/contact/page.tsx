@@ -151,7 +151,7 @@ export default function ContactPage() {
           {/* Contact Info */}
           <div>
             <div className="bg-[#000000] text-white rounded-lg p-8 sticky top-24">
-              <h2 className="font-heading font-bold uppercase tracking-wide text-2xl md:text-3xl mb-8">Contact Information</h2>
+              <h2 className="font-heading font-bold uppercase tracking-wide text-3xl md:text-4xl lg:text-5xl mb-8">Contact Information</h2>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -161,7 +161,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-heading font-semibold uppercase tracking-wide text-lg mb-1">Phone</h3>
+                    <h3 className="font-heading font-semibold uppercase tracking-wide text-lg md:text-xl mb-1">Phone</h3>
                     <a href={`tel:${siteConfig.business.phone.replace(/\./g, '')}`} className="font-body text-gray-300 hover:text-[#D32F2F] transition-colors">
                       {siteConfig.business.phone}
                     </a>
@@ -175,7 +175,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-heading font-semibold uppercase tracking-wide text-lg mb-1">Email</h3>
+                    <h3 className="font-heading font-semibold uppercase tracking-wide text-lg md:text-xl mb-1">Email</h3>
                     <a href={`mailto:${siteConfig.business.email}`} className="font-body text-gray-300 hover:text-[#D32F2F] transition-colors">
                       {siteConfig.business.email}
                     </a>
@@ -190,7 +190,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-heading font-semibold uppercase tracking-wide text-lg mb-1">Service Area</h3>
+                    <h3 className="font-heading font-semibold uppercase tracking-wide text-lg md:text-xl mb-1">Service Area</h3>
                     <p className="font-body text-gray-300">
                       Nashville, Franklin, Hendersonville &amp; surrounding areas
                     </p>
@@ -199,7 +199,7 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-8 pt-8 border-t border-gray-700">
-                <h3 className="font-heading font-semibold uppercase tracking-wide text-lg mb-4">Business Hours</h3>
+                <h3 className="font-heading font-semibold uppercase tracking-wide text-lg md:text-xl mb-4">Business Hours</h3>
                 <ul className="font-body space-y-2 text-gray-300">
                   <li className="flex justify-between">
                     <span>Monday - Friday</span>

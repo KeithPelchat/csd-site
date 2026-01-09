@@ -133,7 +133,7 @@ export default function HomePage() {
             <p className="font-body text-base md:text-lg text-gray-300 leading-relaxed mb-6">
               Here&apos;s our promise: We show up on time with the right equipment sized for your specific needs. Then we go the extra mile to ensure your project runs smoothly from drop-off to pickup.
             </p>
-            <p className="font-body text-lg md:text-xl text-white font-medium">
+            <p className="font-body text-base md:text-lg text-white font-semibold leading-relaxed">
               That&apos;s what sets us apart as Nashville&apos;s premier dumpster rental service.
             </p>
           </div>
@@ -165,7 +165,7 @@ export default function HomePage() {
             <h2 className="font-heading font-bold uppercase tracking-wide text-3xl md:text-4xl lg:text-5xl text-white mb-6">
               Ready to Get Started?
             </h2>
-            <p className="font-body text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="font-body text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-2xl mx-auto">
               Order your dumpster online in seconds. Available 24/7.
             </p>
             <AngledButton href="/contact" className="bg-black hover:bg-gray-900">
