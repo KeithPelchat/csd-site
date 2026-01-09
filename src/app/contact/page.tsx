@@ -44,16 +44,16 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-[#000000] mb-4">
+            <h1 className="font-heading font-bold uppercase tracking-wide text-5xl md:text-6xl lg:text-7xl text-black mb-4">
               Get a Free Quote
             </h1>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="font-body text-base md:text-lg text-gray-600 leading-relaxed mb-8">
               Fill out the form below and we&apos;ll get back to you as soon as possible.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="font-body font-semibold text-sm uppercase tracking-wide block text-gray-700 mb-2">
                   Full Name *
                 </label>
                 <input
@@ -62,14 +62,14 @@ export default function ContactPage() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D32F2F] focus:border-transparent outline-none transition"
+                  className="font-body w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D32F2F] focus:border-transparent outline-none transition"
                   placeholder="John Doe"
                 />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="font-body font-semibold text-sm uppercase tracking-wide block text-gray-700 mb-2">
                     Email Address *
                   </label>
                   <input
@@ -78,12 +78,12 @@ export default function ContactPage() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D32F2F] focus:border-transparent outline-none transition"
+                    className="font-body w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D32F2F] focus:border-transparent outline-none transition"
                     placeholder="john@example.com"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="phone" className="font-body font-semibold text-sm uppercase tracking-wide block text-gray-700 mb-2">
                     Phone Number *
                   </label>
                   <input
@@ -92,21 +92,21 @@ export default function ContactPage() {
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D32F2F] focus:border-transparent outline-none transition"
+                    className="font-body w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D32F2F] focus:border-transparent outline-none transition"
                     placeholder="(615) 555-1234"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="service" className="font-body font-semibold text-sm uppercase tracking-wide block text-gray-700 mb-2">
                   Service Interested In
                 </label>
                 <select
                   id="service"
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D32F2F] focus:border-transparent outline-none transition"
+                  className="font-body w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D32F2F] focus:border-transparent outline-none transition"
                 >
                   <option value="">Select a service...</option>
                   {services.map((service) => (
@@ -118,7 +118,7 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="font-body font-semibold text-sm uppercase tracking-wide block text-gray-700 mb-2">
                   Message
                 </label>
                 <textarea
@@ -126,7 +126,7 @@ export default function ContactPage() {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D32F2F] focus:border-transparent outline-none transition resize-none"
+                  className="font-body w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D32F2F] focus:border-transparent outline-none transition resize-none"
                   placeholder="Tell us about your project..."
                 />
               </div>
@@ -136,12 +136,12 @@ export default function ContactPage() {
               </AngledButton>
 
               {status === 'success' && (
-                <p className="text-green-600 font-medium">
+                <p className="font-body text-green-600 font-semibold">
                   Thank you! We&apos;ll be in touch soon.
                 </p>
               )}
               {status === 'error' && (
-                <p className="text-red-600 font-medium">
+                <p className="font-body text-red-600 font-semibold">
                   Something went wrong. Please try again or call us directly.
                 </p>
               )}
@@ -151,7 +151,7 @@ export default function ContactPage() {
           {/* Contact Info */}
           <div>
             <div className="bg-[#000000] text-white rounded-lg p-8 sticky top-24">
-              <h2 className="text-2xl font-bold mb-8">Contact Information</h2>
+              <h2 className="font-heading font-bold uppercase tracking-wide text-2xl md:text-3xl mb-8">Contact Information</h2>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -161,8 +161,8 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold mb-1">Phone</h3>
-                    <a href={`tel:${siteConfig.business.phone.replace(/\./g, '')}`} className="text-gray-300 hover:text-[#D32F2F] transition-colors">
+                    <h3 className="font-heading font-semibold uppercase tracking-wide text-lg mb-1">Phone</h3>
+                    <a href={`tel:${siteConfig.business.phone.replace(/\./g, '')}`} className="font-body text-gray-300 hover:text-[#D32F2F] transition-colors">
                       {siteConfig.business.phone}
                     </a>
                   </div>
@@ -175,8 +175,8 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold mb-1">Email</h3>
-                    <a href={`mailto:${siteConfig.business.email}`} className="text-gray-300 hover:text-[#D32F2F] transition-colors">
+                    <h3 className="font-heading font-semibold uppercase tracking-wide text-lg mb-1">Email</h3>
+                    <a href={`mailto:${siteConfig.business.email}`} className="font-body text-gray-300 hover:text-[#D32F2F] transition-colors">
                       {siteConfig.business.email}
                     </a>
                   </div>
@@ -190,8 +190,8 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold mb-1">Service Area</h3>
-                    <p className="text-gray-300">
+                    <h3 className="font-heading font-semibold uppercase tracking-wide text-lg mb-1">Service Area</h3>
+                    <p className="font-body text-gray-300">
                       Nashville, Franklin, Hendersonville &amp; surrounding areas
                     </p>
                   </div>
@@ -199,8 +199,8 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-8 pt-8 border-t border-gray-700">
-                <h3 className="font-bold mb-4">Business Hours</h3>
-                <ul className="space-y-2 text-gray-300">
+                <h3 className="font-heading font-semibold uppercase tracking-wide text-lg mb-4">Business Hours</h3>
+                <ul className="font-body space-y-2 text-gray-300">
                   <li className="flex justify-between">
                     <span>Monday - Friday</span>
                     <span>7:00 AM - 6:00 PM</span>
