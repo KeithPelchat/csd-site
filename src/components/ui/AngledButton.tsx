@@ -22,8 +22,9 @@ export function AngledButton({
     bg-[#D32F2F]
     hover:bg-[#B71C1C]
     text-white
-    font-bold
-    text-lg
+    font-heading
+    font-semibold
+    text-base md:text-lg
     uppercase
     tracking-wide
     transition-colors

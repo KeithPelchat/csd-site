@@ -14,12 +14,14 @@
   --color-primary: #D32F2F;
   --color-primary-dark: #B71C1C;
   --color-secondary: #000000;
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Lato', sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-body);
 }
 
 /* Angled Button Clip Path */
@@ -28,12 +30,30 @@ body {
 }
 
 /* Text Shadow Utilities */
+.text-shadow-light {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
 .text-shadow {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .text-shadow-strong {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Outline/Stroke Text Effect */
+.text-outline {
+  --stroke-width: 2px;
+  color: transparent;
+  -webkit-text-stroke: var(--stroke-width) white;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 768px) {
+  .text-outline {
+    --stroke-width: 4px;
+  }
 }
 
 /* Line Clamp Utility */

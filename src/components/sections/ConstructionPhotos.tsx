@@ -96,10 +96,10 @@ export function ConstructionPhotos() {
     <section className="py-20 bg-white" aria-label="Construction Dumpster Rentals">
       <Container>
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black uppercase tracking-wide mb-6">
+          <h2 className="font-heading font-bold uppercase tracking-wide text-3xl md:text-4xl lg:text-5xl text-black mb-6">
             Nashville, TN Construction Dumpster Rentals
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+          <p className="font-body text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
             On an active construction site, proper debris management isn&apos;t just convenient—it&apos;s
             critical for safety, efficiency, and staying on schedule. One overflowing dumpster or
             missed pickup can halt your entire crew&apos;s productivity. Clean Site Dumpsters provides
@@ -214,7 +214,7 @@ export function ConstructionPhotos() {
           </div>
 
           {/* Image Counter */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-lg">
+          <div className="font-heading absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-lg tracking-wide">
             {lightboxIndex + 1} / {photos.length}
           </div>
 

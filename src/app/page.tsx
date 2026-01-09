@@ -96,10 +96,10 @@ export default function HomePage() {
       <section className="py-16 bg-white">
         <Container>
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-8">
+            <h2 className="font-heading font-bold uppercase tracking-wide text-3xl md:text-4xl lg:text-5xl text-black text-center mb-8">
               Your Trusted Partner for Dumpster Rental in Nashville
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed text-center">
+            <p className="font-body text-base md:text-lg text-gray-700 leading-relaxed text-center">
               Looking for reliable dumpster rental in Nashville that won&apos;t let you down? Clean Site Dumpsters delivers the perfect waste removal solution for every project—from weekend home cleanouts to major construction site debris management. Whether you&apos;re tackling a small renovation or managing a commercial job site, we&apos;ve got the right-sized roll-off dumpster to get the job done.
             </p>
           </div>
@@ -110,13 +110,13 @@ export default function HomePage() {
       <section className="py-16 bg-gray-50">
         <Container>
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-8">
+            <h2 className="font-heading font-bold uppercase tracking-wide text-3xl md:text-4xl lg:text-5xl text-black text-center mb-8">
               Available When You Need Us Most
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed text-center mb-6">
+            <p className="font-body text-base md:text-lg text-gray-700 leading-relaxed text-center mb-6">
               Dealing with junk and debris shouldn&apos;t be complicated. That&apos;s why Clean Site Dumpsters makes waste removal simple with transparent upfront pricing, 24/7 online ordering, and flexible scheduling that works around your timeline.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed text-center">
+            <p className="font-body text-base md:text-lg text-gray-700 leading-relaxed text-center">
               No surprises. No hidden fees. Just dependable Nashville dumpster rental services you can count on when you need them most.
             </p>
           </div>
@@ -127,13 +127,13 @@ export default function HomePage() {
       <section className="py-16 bg-black text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+            <h2 className="font-heading font-bold uppercase tracking-wide text-3xl md:text-4xl lg:text-5xl mb-8">
               The Clean Site Dumpsters Difference
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
+            <p className="font-body text-base md:text-lg text-gray-300 leading-relaxed mb-6">
               Here&apos;s our promise: We show up on time with the right equipment sized for your specific needs. Then we go the extra mile to ensure your project runs smoothly from drop-off to pickup.
             </p>
-            <p className="text-xl text-white font-medium">
+            <p className="font-body text-lg md:text-xl text-white font-medium">
               That&apos;s what sets us apart as Nashville&apos;s premier dumpster rental service.
             </p>
           </div>
@@ -162,10 +162,10 @@ export default function HomePage() {
       <section className="py-20 bg-[#D32F2F]">
         <Container>
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="font-heading font-bold uppercase tracking-wide text-3xl md:text-4xl lg:text-5xl text-white mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="font-body text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Order your dumpster online in seconds. Available 24/7.
             </p>
             <AngledButton href="/contact" className="bg-black hover:bg-gray-900">

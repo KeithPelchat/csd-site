@@ -108,7 +108,7 @@ export function Testimonial() {
                 isTransitioning ? 'opacity-0' : 'opacity-100'
               }`}
             >
-              <p className="text-lg md:text-2xl lg:text-[26px] text-white leading-[1.6] font-medium">
+              <p className="font-body text-lg md:text-2xl lg:text-[26px] text-white leading-[1.6] font-normal">
                 {testimonial.quote}
               </p>
             </blockquote>
@@ -116,7 +116,7 @@ export function Testimonial() {
 
           {/* Author */}
           <cite
-            className={`block text-lg md:text-xl text-gray-300 not-italic mt-8 transition-opacity duration-300 ${
+            className={`font-heading block text-lg md:text-xl text-gray-300 not-italic mt-8 uppercase tracking-wide transition-opacity duration-300 ${
               isTransitioning ? 'opacity-0' : 'opacity-100'
             }`}
           >

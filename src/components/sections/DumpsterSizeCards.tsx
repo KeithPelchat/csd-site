@@ -101,32 +101,32 @@ function FlipCard({ card }: { card: DumpsterCard }) {
             {/* Most Popular Badge */}
             {card.popular && (
               <div className="absolute top-4 left-0 right-0 flex justify-center">
-                <span className="bg-[#D32F2F] text-white text-sm font-bold uppercase tracking-wide px-4 py-2 rounded-full shadow-lg">
+                <span className="font-heading bg-[#D32F2F] text-white text-sm font-bold uppercase tracking-wide px-4 py-2 rounded-full shadow-lg">
                   Most Popular Size
                 </span>
               </div>
             )}
 
             {/* Size */}
-            <div className="text-6xl md:text-7xl font-black text-white tracking-tight drop-shadow-lg">
+            <div className="font-heading text-6xl md:text-7xl font-bold text-white tracking-tight drop-shadow-lg">
               {card.size}
             </div>
 
             {/* Subtitle */}
-            <div className="text-white/90 font-medium uppercase tracking-wide mt-3 text-center">
+            <div className="font-heading text-white/90 font-medium uppercase tracking-wide mt-3 text-center">
               Roll Off Dumpster ${card.price}
             </div>
 
             {/* Popular text below */}
             {card.popular && (
-              <div className="text-white/70 text-sm mt-4">
+              <div className="font-body text-white/70 text-sm mt-4">
                 Most Popular Size
               </div>
             )}
 
             {/* Click hint */}
             <div className="absolute bottom-6 left-0 right-0 text-center">
-              <span className="text-white/60 text-sm flex items-center justify-center gap-2 group-hover:text-white/90 transition-colors">
+              <span className="font-body text-white/60 text-sm flex items-center justify-center gap-2 group-hover:text-white/90 transition-colors">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
                 </svg>
@@ -150,10 +150,10 @@ function FlipCard({ card }: { card: DumpsterCard }) {
           <div className="h-full flex flex-col p-6">
             {/* Size & Price */}
             <div className="text-center mb-4">
-              <div className="text-4xl md:text-5xl font-black text-white tracking-tight">
+              <div className="font-heading text-4xl md:text-5xl font-bold text-white tracking-tight">
                 {card.size}
               </div>
-              <div className="text-white/90 font-medium uppercase tracking-wide mt-2">
+              <div className="font-heading text-white/90 font-medium uppercase tracking-wide mt-2">
                 Roll Off Dumpster ${card.price}
               </div>
             </div>
@@ -163,7 +163,7 @@ function FlipCard({ card }: { card: DumpsterCard }) {
               {card.features.map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <span className="text-white/80 mt-0.5">•</span>
-                  <span className="text-sm leading-snug">{feature}</span>
+                  <span className="font-body text-sm leading-snug">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -171,7 +171,7 @@ function FlipCard({ card }: { card: DumpsterCard }) {
             {/* Order Button */}
             <Link
               href="/contact"
-              className="mt-4 block w-full bg-black text-white text-center py-3 px-6 rounded-lg font-bold uppercase tracking-wide hover:bg-gray-800 transition-colors"
+              className="font-heading mt-4 block w-full bg-black text-white text-center py-3 px-6 rounded-lg font-semibold uppercase tracking-wide hover:bg-gray-800 transition-colors"
               onClick={(e) => e.stopPropagation()}
             >
               Order Now
@@ -179,7 +179,7 @@ function FlipCard({ card }: { card: DumpsterCard }) {
 
             {/* Click to flip back hint */}
             <div className="text-center mt-3">
-              <span className="text-white/60 text-xs">
+              <span className="font-body text-white/60 text-xs">
                 Click to flip back
               </span>
             </div>
@@ -196,14 +196,14 @@ export function DumpsterSizeCards() {
       <Container>
         {/* Heading */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-black uppercase tracking-tight">
+          <h2 className="font-heading font-bold uppercase tracking-wide text-3xl md:text-4xl lg:text-5xl text-black">
             Residential &amp; Commercial Dumpster Services
           </h2>
         </div>
 
         {/* Description Paragraph */}
         <div className="max-w-5xl mx-auto mb-12">
-          <p className="text-gray-700 leading-relaxed text-center">
+          <p className="font-body text-base md:text-lg text-gray-700 leading-relaxed text-center">
             Clean Site Dumpsters was founded with the idea of providing customers with the absolute best experience in residential &amp; commercial dumpster rental. Whether you&apos;re a homeowner or contractor, we have tailored our business to fit your needs. Our affordable dumpsters are ideal for any project, from small to large; we offer an array of sizes with 10-yard, 15-yard, and 20-yard roll off dumpsters. Rent a dumpster for your Nashville construction project! We have you covered from home clean outs, renovation projects, demolition, and new builds. It doesn&apos;t stop there, our trucks are purposely designed to fit in tight spaces, allowing us to deliver a dumpster in some places that others can&apos;t. We are able to maneuver into places with zero lot lines, side yards, alleyways, or even a garage to keep your neighbors happy. In Nashville, our dumpster rental costs range from $349 – $519, depending on the size you need.
           </p>
         </div>
@@ -219,7 +219,7 @@ export function DumpsterSizeCards() {
         <div className="text-center">
           <Link
             href="/services"
-            className="inline-block bg-black text-white py-4 px-10 rounded-lg font-bold uppercase tracking-wide hover:bg-gray-900 transition-colors shadow-lg"
+            className="font-heading inline-block bg-black text-white py-4 px-10 rounded-lg font-semibold uppercase tracking-wide hover:bg-gray-900 transition-colors shadow-lg"
           >
             Nashville Dumpster Rentals
           </Link>

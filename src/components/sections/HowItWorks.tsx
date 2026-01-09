@@ -45,7 +45,7 @@ export function HowItWorks() {
     <section className="py-20 bg-white" aria-label="How It Works">
       <Container>
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-black uppercase tracking-wide">
+          <h2 className="font-heading font-bold uppercase tracking-wide text-3xl md:text-4xl lg:text-5xl text-black">
             How It Works
           </h2>
         </div>
@@ -63,17 +63,17 @@ export function HowItWorks() {
               </div>
 
               {/* Step Number */}
-              <div className="text-sm font-bold text-[#D32F2F] uppercase mb-2">
+              <div className="font-heading text-sm font-bold text-[#D32F2F] uppercase tracking-wide mb-2">
                 Step {step.number}
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-bold text-black mb-3">
+              <h3 className="font-heading font-semibold uppercase text-xl md:text-2xl text-black mb-3">
                 {step.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="font-body text-gray-600 text-sm leading-relaxed">
                 {step.description}
               </p>
             </div>
@@ -91,13 +91,13 @@ export function HowItWorks() {
 
               {/* Content */}
               <div className="flex-1">
-                <div className="text-sm font-bold text-[#D32F2F] uppercase mb-1">
+                <div className="font-heading text-sm font-bold text-[#D32F2F] uppercase tracking-wide mb-1">
                   Step {step.number}
                 </div>
-                <h3 className="text-lg font-bold text-black mb-2">
+                <h3 className="font-heading font-semibold uppercase text-xl text-black mb-2">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="font-body text-gray-600 text-sm leading-relaxed">
                   {step.description}
                 </p>
               </div>

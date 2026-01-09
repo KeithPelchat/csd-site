@@ -18,11 +18,16 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 uppercase tracking-tight text-shadow-strong">
-          Nashville&apos;s All-In-One Dumpster Rental Solution
+        <h1 className="mb-6">
+          <span className="block font-heading font-bold uppercase tracking-wide text-5xl md:text-6xl lg:text-7xl text-outline">
+            Nashville&apos;s One Stop Shop
+          </span>
+          <span className="block font-heading font-bold uppercase tracking-wide text-2xl md:text-3xl lg:text-4xl text-white mt-2 text-shadow-light">
+            For Affordable Dumpster Rentals
+          </span>
         </h1>
-        <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-3xl mx-auto uppercase tracking-wide text-shadow">
-          Affordable Dumpster Rental in Nashville, Franklin, Hendersonville, &amp; Beyond — Just a Click Away
+        <p className="font-body text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-3xl mx-auto tracking-wide text-shadow">
+          Nashville, Franklin, Hendersonville, &amp; Beyond — Just a Click Away
         </p>
         <AngledButton href="/contact">
           Reserve a Dumpster Now
