@@ -61,7 +61,7 @@ function FlipCard({ card }: { card: DumpsterCard }) {
 
   return (
     <div
-      className="relative h-[450px] cursor-pointer group"
+      className="relative h-[480px] lg:h-[520px] cursor-pointer group"
       style={{ perspective: '1000px', WebkitPerspective: '1000px' }}
       onClick={() => setIsFlipped(!isFlipped)}
     >
@@ -147,23 +147,23 @@ function FlipCard({ card }: { card: DumpsterCard }) {
             WebkitTransform: 'rotateY(180deg) translateZ(0px)',
           }}
         >
-          <div className="h-full flex flex-col p-6">
+          <div className="h-full flex flex-col p-4 md:p-6">
             {/* Size & Price */}
-            <div className="text-center mb-4">
-              <div className="font-heading text-4xl md:text-5xl font-bold text-white tracking-tight">
-                {card.size}
-              </div>
-              <div className="font-heading text-white/90 font-medium uppercase tracking-wide mt-2">
-                Roll Off Dumpster ${card.price}
+            <div className="text-center mb-3 md:mb-4 shrink-0">
+              <h3 className="font-heading text-2xl md:text-3xl font-bold text-white uppercase tracking-wide">
+                {card.size} Roll Off Dumpster
+              </h3>
+              <div className="font-heading text-base md:text-lg text-white/90 font-medium uppercase tracking-wide mt-1">
+                ${card.price}
               </div>
             </div>
 
             {/* Features List */}
-            <ul className="space-y-3 text-white flex-1 mt-2">
+            <ul className="space-y-2 text-white flex-1 min-h-0">
               {card.features.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <span className="text-white/80 mt-0.5">•</span>
-                  <span className="font-body text-sm leading-snug">{feature}</span>
+                <li key={index} className="flex items-start gap-2">
+                  <span className="text-white/80 mt-0.5 shrink-0">•</span>
+                  <span className="font-body text-sm md:text-base leading-relaxed">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -171,14 +171,14 @@ function FlipCard({ card }: { card: DumpsterCard }) {
             {/* Order Button */}
             <Link
               href="/contact"
-              className="font-heading mt-4 block w-full bg-black text-white text-center py-3 px-6 rounded-lg font-semibold uppercase tracking-wide hover:bg-gray-800 transition-colors"
+              className="bg-black text-white font-heading font-semibold uppercase tracking-wide text-sm py-3 px-6 rounded hover:bg-gray-900 transition-colors w-full text-center block mt-4 shrink-0"
               onClick={(e) => e.stopPropagation()}
             >
               Order Now
             </Link>
 
             {/* Click to flip back hint */}
-            <div className="text-center mt-3">
+            <div className="text-center mt-2 shrink-0">
               <span className="font-body text-white/60 text-xs">
                 Click to flip back
               </span>
@@ -209,7 +209,7 @@ export function DumpsterSizeCards() {
         </div>
 
         {/* Three Flip Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {dumpsterCards.map((card) => (
             <FlipCard key={card.id} card={card} />
           ))}
