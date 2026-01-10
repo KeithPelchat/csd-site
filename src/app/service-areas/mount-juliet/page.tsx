@@ -125,8 +125,8 @@ export default function MountJulietServiceAreaPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/Hero BG.png"
-            alt="Mount Juliet Tennessee dumpster rental service"
+            src="/images/areas/mount-juliet.jpg"
+            alt="Mount Juliet Tennessee Providence area - dumpster rental service"
             fill
             className="object-cover"
             priority
@@ -149,6 +149,16 @@ export default function MountJulietServiceAreaPage() {
             </AngledButton>
           </div>
         </Container>
+
+        {/* Image Attribution */}
+        <a
+          href="https://commons.wikimedia.org/w/index.php?curid=47603674"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-2 right-2 z-10 font-body text-xs text-white/60 hover:text-white/80 transition-colors"
+        >
+          Photo: MtJulietEditor96, CC BY-SA 4.0
+        </a>
       </section>
 
       {/* Breadcrumb */}

@@ -127,8 +127,8 @@ export default function BrentwoodServiceAreaPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/Hero BG.png"
-            alt="Brentwood Tennessee dumpster rental service"
+            src="/images/areas/brentwood.jpg"
+            alt="Brentwood Tennessee neighborhood - dumpster rental service"
             fill
             className="object-cover"
             priority
@@ -151,6 +151,16 @@ export default function BrentwoodServiceAreaPage() {
             </AngledButton>
           </div>
         </Container>
+
+        {/* Image Attribution */}
+        <a
+          href="https://www.cblproperties.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-2 right-2 z-10 font-body text-xs text-white/60 hover:text-white/80 transition-colors"
+        >
+          Photo: CBL Properties
+        </a>
       </section>
 
       {/* Breadcrumb */}

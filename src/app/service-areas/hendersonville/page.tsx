@@ -125,8 +125,8 @@ export default function HendersonvilleServiceAreaPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/Hero BG.png"
-            alt="Hendersonville Tennessee dumpster rental service"
+            src="/images/areas/hendersonville.jpg"
+            alt="Hendersonville Tennessee lakeside view - dumpster rental service"
             fill
             className="object-cover"
             priority
@@ -149,6 +149,16 @@ export default function HendersonvilleServiceAreaPage() {
             </AngledButton>
           </div>
         </Container>
+
+        {/* Image Attribution */}
+        <a
+          href="https://commons.wikimedia.org/w/index.php?curid=6897598"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-2 right-2 z-10 font-body text-xs text-white/60 hover:text-white/80 transition-colors"
+        >
+          Photo: Sugarlandfanatic, CC BY-SA 3.0
+        </a>
       </section>
 
       {/* Breadcrumb */}

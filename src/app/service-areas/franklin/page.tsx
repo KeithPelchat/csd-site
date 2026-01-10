@@ -126,8 +126,8 @@ export default function FranklinServiceAreaPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/Hero BG.png"
-            alt="Franklin Tennessee dumpster rental service"
+            src="/images/areas/franklin.jpg"
+            alt="Historic downtown Franklin Tennessee - dumpster rental service"
             fill
             className="object-cover"
             priority

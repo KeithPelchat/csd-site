@@ -129,8 +129,8 @@ export default function NashvilleServiceAreaPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/Hero BG.png"
-            alt="Nashville dumpster rental service"
+            src="/images/areas/nashville.jpg"
+            alt="Nashville skyline - dumpster rental service in Nashville Tennessee"
             fill
             className="object-cover"
             priority

@@ -126,8 +126,8 @@ export default function MurfreesboroServiceAreaPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/Hero BG.png"
-            alt="Murfreesboro Tennessee dumpster rental service"
+            src="/images/areas/murfreesboro.jpg"
+            alt="Murfreesboro Tennessee downtown square - dumpster rental service"
             fill
             className="object-cover"
             priority
