@@ -26,7 +26,12 @@ export const navigation: NavigationConfig = {
     },
     {
       name: 'About',
-      href: '/about'
+      href: '/about',
+      submenu: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Blog', href: '/about/blog' },
+        { name: 'FAQs', href: '/faqs' }
+      ]
     },
     {
       name: 'Contact',
@@ -40,6 +45,8 @@ export const navigation: NavigationConfig = {
     })),
     company: [
       { name: 'About Us', href: '/about' },
+      { name: 'Blog', href: '/about/blog' },
+      { name: 'FAQs', href: '/faqs' },
       { name: 'Contact', href: '/contact' },
       { name: 'Service Areas', href: '/service-areas' }
     ]

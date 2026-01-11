@@ -40,7 +40,7 @@ export const siteConfig: SiteConfig = {
     }
   },
   seo: {
-    siteUrl: 'https://csdwaste.com',
+    siteUrl: 'https://dev.csdwaste.com',
     title: 'Dumpster Rental Nashville | Clean Site Dumpsters',
     description: 'Nashville dumpster rental services for residential, commercial, and construction projects. Roll off dumpster Nashville with 24/7 online ordering.',
     keywords: 'dumpster rental Nashville, clean site dumpster Nashville, Nashville dumpster rental services, roll off dumpster Nashville',

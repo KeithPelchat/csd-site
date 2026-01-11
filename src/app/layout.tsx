@@ -98,6 +98,17 @@ export const metadata: Metadata = {
 
   // Other meta
   other: {
+    // Content Security Policy
+    'Content-Security-Policy': `
+      default-src 'self';
+      script-src 'self' 'unsafe-eval' 'unsafe-inline' https://maps.googleapis.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+      font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+      img-src 'self' data: https: blob:;
+      connect-src 'self' https://cdn.sanity.io https://*.sanity.io;
+      frame-src 'self' https://www.google.com;
+    `.replace(/\s+/g, ' ').trim(),
+
     // Geo meta tags for local SEO
     'geo.region': `US-${business.address.state}`,
     'geo.placename': business.address.city,

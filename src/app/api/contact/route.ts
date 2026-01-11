@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { headers } from 'next/headers'
 
 interface ContactFormData {
   name: string
@@ -6,6 +7,32 @@ interface ContactFormData {
   phone: string
   service?: string
   message?: string
+}
+
+// Rate limiting (simple in-memory for single server)
+const rateLimit = new Map<string, { count: number; resetTime: number }>()
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now()
+  const limit = rateLimit.get(ip)
+
+  if (!limit || now > limit.resetTime) {
+    rateLimit.set(ip, { count: 1, resetTime: now + 60000 }) // 1 minute window
+    return true
+  }
+
+  if (limit.count >= 5) {
+    // Max 5 requests per minute
+    return false
+  }
+
+  limit.count++
+  return true
+}
+
+// Sanitize inputs (remove HTML/scripts)
+function sanitize(str: string): string {
+  return str.replace(/<[^>]*>/g, '').trim()
 }
 
 function validateEmail(email: string): boolean {
@@ -20,24 +47,43 @@ function validatePhone(phone: string): boolean {
 
 export async function POST(request: NextRequest) {
   try {
-    const data: ContactFormData = await request.json()
+    // Get client IP for rate limiting
+    const headersList = await headers()
+    const forwarded = headersList.get('x-forwarded-for')
+    const ip = forwarded ? forwarded.split(',')[0] : 'unknown'
 
-    // Validate required fields
-    if (!data.name || !data.name.trim()) {
+    // Rate limiting
+    if (!checkRateLimit(ip)) {
       return NextResponse.json(
-        { error: 'Name is required' },
-        { status: 400 }
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429 }
       )
     }
 
-    if (!data.email || !validateEmail(data.email)) {
+    const data: ContactFormData = await request.json()
+
+    // Sanitize all inputs
+    const sanitizedData = {
+      name: sanitize(data.name || ''),
+      email: sanitize(data.email || ''),
+      phone: sanitize(data.phone || ''),
+      service: data.service ? sanitize(data.service) : undefined,
+      message: data.message ? sanitize(data.message) : undefined,
+    }
+
+    // Validate required fields
+    if (!sanitizedData.name) {
+      return NextResponse.json({ error: 'Name is required' }, { status: 400 })
+    }
+
+    if (!sanitizedData.email || !validateEmail(sanitizedData.email)) {
       return NextResponse.json(
         { error: 'Valid email is required' },
         { status: 400 }
       )
     }
 
-    if (!data.phone || !validatePhone(data.phone)) {
+    if (!sanitizedData.phone || !validatePhone(sanitizedData.phone)) {
       return NextResponse.json(
         { error: 'Valid phone number is required' },
         { status: 400 }
@@ -45,25 +91,25 @@ export async function POST(request: NextRequest) {
     }
 
     // TODO: Send email via SES
-    // await sendContactEmail(data)
+    // await sendContactEmail(sanitizedData)
 
     // TODO: Send SMS notification via Twilio
-    // await sendSMSNotification(data)
+    // await sendSMSNotification(sanitizedData)
 
     // Log the submission (in production, save to database)
     console.log('Contact form submission:', {
-      name: data.name,
-      email: data.email,
-      phone: data.phone,
-      service: data.service || 'Not specified',
-      message: data.message || 'No message',
-      timestamp: new Date().toISOString()
+      name: sanitizedData.name,
+      email: sanitizedData.email,
+      phone: sanitizedData.phone,
+      service: sanitizedData.service || 'Not specified',
+      message: sanitizedData.message || 'No message',
+      timestamp: new Date().toISOString(),
     })
 
     return NextResponse.json(
       {
         success: true,
-        message: 'Thank you for your inquiry. We will contact you soon.'
+        message: 'Thank you for your inquiry. We will contact you soon.',
       },
       { status: 200 }
     )
